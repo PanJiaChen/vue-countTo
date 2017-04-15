@@ -1,27 +1,29 @@
 const path = require('path')
 const webpack = require('webpack')
-
+function resolve(dir) {
+  return path.join(__dirname, '..', dir)
+}
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'vue-count-to.min.js',
-    library: 'VueCountTo',
+    library: 'CountTo',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(js|vue)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: 'pre',
-      //   include: [resolve('src'), resolve('test')],
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter')
-      //   }
-      // },
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -42,7 +44,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue$: 'vue/dist/vue.common.js'
+      vue$: 'vue/dist/vue.esm.js'
     }
   },
   externals: {

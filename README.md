@@ -13,8 +13,8 @@ npm install vue-count-to
 ### Example
 
 ```vue
-	<template>
-		<countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
+<template>
+	<countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ npm install vue-count-to
 ```
 demo:
 
-![demo](https://github.com/PanJiaChen/vue-countTo/countDemo)
+![demo](https://github.com/PanJiaChen/vue-countTo/blob/master/countDemo.gif)
 
 Use CDN Script: [demo](https://github.com/PanJiaChen/vue-countTo/blob/master/demo/index.html)
 

@@ -1,52 +1,40 @@
 # vue-countTo
-It's a vue component that will count to a target number at a specified duration.
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.
 It is learn from countUp.js;
 
-## [Try the demo](https://github.com/wscn-FED/wscn-market-components/raw/master/images/demo.png)
+## [Try the demo](http://panjiachen.github.io/countTo/demo/)
 
 ### How to use?
 ```bash
-npm install vue-countTo
+npm install vue-count-to
 ```
 
 ### Example
 
-```js
-	<link href="**/marketComponents-default.css" rel="stylesheet">
+```vue
+	<template>
+		<countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
+</template>
 
-	<div id="root"></div>
-
-	<script src="**/wscn-react-vendor.min.js"></script>
-	<script src="/**/react-market.min.js"></script>
-
-	<script>
-		var mountDom = document.getElementById('root');
-        var options = {
-            symbols: [
-                "XAUUSD",
-                "UKOil",
-                "000001",
-                "EURUSD",
-                "USDJPY"
-            ],
-            priceMinInterval: 2000,
-            baseApi: "https://forexdata.wallstreetcn.com/",
-            priceApi: "real",
-            priceApiField: "prod_name,last_px,px_change,px_change_rate,price_precision,securities_type",
-            klineApi: "kline",
-            candle_period:5,
-            data_count:80,
-            end_time:0,
-            klineApiField: "close_px"
-        };
-        new WSCNTilesetQuote(options).init(mountDom);
-	<script>
+<script>
+  import countTo from 'vue-count-to';
+  export default {
+    components: { countTo },
+    data () {
+      return {
+        startVal: 0,
+        endVal: 2017
+      }
+    }
+  }
+</script>
 ```
 demo:
 
-![demo](https://github.com/wscn-FED/wscn-market-components/raw/master/images/demo.png)
+![demo](https://github.com/PanJiaChen/vue-countTo/countDemo)
+
+Use CDN Script: [demo](https://github.com/PanJiaChen/vue-countTo/blob/master/demo/index.html)
 
 
 

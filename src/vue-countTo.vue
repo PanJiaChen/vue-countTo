@@ -148,11 +148,10 @@ export default {
       }
 
       this.displayValue = this.formatNumber(this.printVal)
-      // whether to continue
       if (progress < this.localDuration) {
         this.rAF = requestAnimationFrame(this.count);
       } else {
-        if (this.callback) this.$emit('callback');
+        this.$emit('callback');
       }
     },
     isNumber(val) {

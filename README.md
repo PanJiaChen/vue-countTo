@@ -55,6 +55,8 @@ Use CDN Script: [demo](https://github.com/PanJiaChen/vue-countTo/blob/master/dem
 | useEasing     | is use easing function | Boolean | true |
 | easingFn     | the easing function | Function | — |
 
+** notes: when autoplay:true , it will auto start when startVal or endVal change **
+
 
 ### Functions
 | Function Name | Description   |

@@ -1,7 +1,7 @@
 {
   "name": "vue-count-to",
   "description": "It's a vue component that will count to a target number at a specified duration",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "author": "Pan <panfree23@gmail.com>",
   "main": "dist/vue-count-to.min.js",
   "scripts": {

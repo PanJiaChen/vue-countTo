@@ -2,6 +2,7 @@
 
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.
+It is support vue-ssr.
 It is learn from countUp.js;
 
 ## [Try the demo](http://panjiachen.github.io/countTo/demo/)
@@ -15,7 +16,7 @@ npm install vue-count-to
 
 ```vue
 <template>
-	<countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
+  <countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
 </template>
 
 <script>

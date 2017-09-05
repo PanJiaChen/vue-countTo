@@ -85,6 +85,18 @@ export default {
       return this.startVal > this.endVal
     }
   },
+  watch: {
+    startVal() {
+      if (this.autoplay) {
+        this.start();
+      }
+    },
+    endVal() {
+      if (this.autoplay) {
+        this.start();
+      }
+    }
+  },
   mounted() {
     if (this.autoplay) {
       this.start();

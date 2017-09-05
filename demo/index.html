@@ -27,14 +27,16 @@
         <div class="example-item">
           <h3> simple example</h3>
           <code>&lt;count-to :startVal=&#x27;0&#x27; :endVal=&#x27;2017&#x27; :duration=4000&gt;&lt;/count-to&gt;</code>
-          <count-to ref='example1' class='example1' :start-val='0' :end-val='2017' :duration=4000></count-to>
-          <div class='example-btn' @click='start1'>开始</div>
+          <count-to ref='example1' class='example1' :start-val=startVal1 :end-val='endVal1' :duration=4000></count-to>
+          <div class='example-btn' @click='start1'>start</div>
+          <div class='example-btn' @click='changeExampleEndVal'>change end-val</div>
+          <div class='example-btn' @click='incrementalUpdate'>incremental update</div>
         </div>
         <div class="example-item">
           <h3> count down example</h3>
           <code> &lt;count-to :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27; :duration=8000&gt;&lt;/count-to&gt;</code>
           <count-to ref='example2' class='example2' :start-val='2017' :end-val=0 :duration=8000></count-to>
-          <div class='example-btn' @click='start2'>开始</div>
+          <div class='example-btn' @click='start2'>start</div>
         </div>
         <div class="example-item">
           <h3> custom example</h3>
@@ -45,8 +47,8 @@
             <label class="label" for="startValInput">startVal:  <input type="number" v-model.number='setStartVal' name='startValInput' /></label>
             <label class="label" for="endValInput">endVal:  <input type="number" v-model.number='setEndVal' name='endVaInput' /></label>
             <label class="label" for="durationInput">duration:  <input type="number" v-model.number='setDuration' name='durationInput' /></label>
-            <div class="startBtn example-btn" @click='start3'>开始</div>
-            <div class="pause-resume-btn example-btn" @click='pauseResume'>暂停/恢复</div>
+            <div class="startBtn example-btn" @click='start3'>start</div>
+            <div class="pause-resume-btn example-btn" @click='pauseResume'>pause/resume</div>
             <br/>
             <label class="label" for="decimalsInput">decimals:  <input type="number" v-model.number='setDecimals' name='decimalsInput' /></label>
             <label class="label" for="separatorInput">separator:  <input v-model='setSeparator' name='separatorInput' /></label>
@@ -70,7 +72,9 @@
           setDecimals: 0,
           setSeparator: ',',
           setSuffix: ' rmb',
-          setPrefix: '¥ '
+          setPrefix: '¥ ',
+          startVal1:0,
+          endVal1:2017
         }
       },
       computed: {
@@ -117,6 +121,13 @@
         },
       },
       methods: {
+        changeExampleEndVal(){
+          this.endVal1=this.endVal1+1000
+        },
+        incrementalUpdate(){
+          this.startVal1=this.endVal1
+          this.endVal1=this.endVal1+1000
+        },
         callback() {
           console.log('callback')
         },

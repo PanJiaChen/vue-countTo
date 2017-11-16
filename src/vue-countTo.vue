@@ -27,6 +27,11 @@ export default {
       required: false,
       default: true
     },
+    autoplayWhenChange: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     decimals: {
       type: Number,
       required: false,
@@ -87,12 +92,12 @@ export default {
   },
   watch: {
     startVal() {
-      if (this.autoplay) {
+      if (this.autoplay || this.autoplayWhenChange) {
         this.start();
       }
     },
     endVal() {
-      if (this.autoplay) {
+      if (this.autoplay || this.autoplayWhenChange) {
         this.start();
       }
     }

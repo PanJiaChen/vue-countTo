@@ -150,7 +150,7 @@ export default {
         if (this.countDown) {
           this.printVal = this.localStartVal - ((this.localStartVal - this.endVal) * (progress / this.localDuration));
         } else {
-          this.printVal = this.localStartVal + (this.localStartVal - this.startVal) * (progress / this.localDuration);
+          this.printVal = this.localStartVal + (this.endVal - this.localStartVal) * (progress / this.localDuration);
         }
       }
       if (this.countDown) {

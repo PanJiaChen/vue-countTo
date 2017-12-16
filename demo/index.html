@@ -39,6 +39,12 @@
           <div class='example-btn' @click='start2'>start</div>
         </div>
         <div class="example-item">
+          <h3> animation with update callback</h3>
+          <code> &lt;count-to :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27; :duration=8000 :update-fn="callbackUpdate" mark="exampleUpdate"&gt;&lt;/count-to&gt;</code>
+          <count-to ref='exampleUpdate' class='example2' :start-val='2017' :end-val=0 :duration=8000 :update-fn="callbackUpdate" mark="exampleUpdate"></count-to>
+          <div class='example-btn' @click='startUpdate'>start</div>
+        </div>
+        <div class="example-item">
           <h3> custom example</h3>
           <count-to ref='example3' class='example3' :start-val='_startVal' :end-val='_endVal' :duration='_duration' :decimals='_decimals'
             :separator='_separator' :prefix='_prefix' :suffix='_suffix' :autoplay=false>
@@ -131,6 +137,9 @@
         callback() {
           console.log('callback')
         },
+        callbackUpdate(timestamp,value,mark) {
+          console.log(timestamp,value,mark)
+        },
         start1() {
           this.$refs.example1.start();
         },
@@ -139,6 +148,9 @@
         },
         start3() {
           this.$refs.example3.start();
+        },
+        startUpdate() {
+          this.$refs.exampleUpdate.start();
         },
         pauseResume() {
           this.$refs.example3.pauseResume();

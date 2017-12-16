@@ -55,6 +55,11 @@ export default {
       required: false,
       default: ''
     },
+    mark: {
+      type: String,
+      required: false,
+      default: ''
+    },
     useEasing: {
       type: Boolean,
       required: false,
@@ -64,6 +69,11 @@ export default {
       type: Function,
       default(t, b, c, d) {
         return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
+      }
+    },
+    updateFn: {
+      type: Function,
+      default(timestap, printVal, markCode) {
       }
     }
   },
@@ -161,6 +171,7 @@ export default {
 
       this.displayValue = this.formatNumber(this.printVal)
       if (progress < this.localDuration) {
+        this.updateFn(timestamp, this.printVal, this.mark);
         this.rAF = requestAnimationFrame(this.count);
       } else {
         this.$emit('callback');

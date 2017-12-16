@@ -54,6 +54,8 @@ Use CDN Script: [demo](https://github.com/PanJiaChen/vue-countTo/blob/master/dem
 | suffix     | the suffix | String | '' |
 | useEasing     | is use easing function | Boolean | true |
 | easingFn     | the easing function | Function | — |
+| updateFn     | the update function called before next frame | Function | — |
+
 
 ** notes: when autoplay:true , it will auto start when startVal or endVal change **
 

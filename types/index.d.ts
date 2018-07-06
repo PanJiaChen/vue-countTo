@@ -4,52 +4,53 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.4
 
-import Vue from 'vue'
+import Vue, { ComponentOptions } from 'vue'
 
-export declare class VueCountTo extends Vue {
-    // the value you want to begin at
-    startVal: number
+declare module '*.vue' {
+    interface ComponentOptions<V extends Vue> {
+        // the value you want to begin at
+        startVal: number
 
-    // the value you want to arrive at
-    endVal: number
+        // the value you want to arrive at
+        endVal: number
 
-    // duration in millisecond
-    duration: number
+        // duration in millisecond
+        duration: number
 
-    // when mounted autoplay
-    autoplay: boolean
+        // when mounted autoplay
+        autoplay: boolean
 
-    // the number of decimal places to show
-    decimals: number
+        // the number of decimal places to show
+        decimals: number
 
-    // the split decimal
-    decimal: string
+        // the split decimal
+        decimal: string
 
-    // the separator
-    separator: string
+        // the separator
+        separator: string
 
-    // the prefix
-    prefix: string
+        // the prefix
+        prefix: string
 
-    // the suffix
-    suffix: string
+        // the suffix
+        suffix: string
 
-    // is use easing function
-    useEasing: boolean
+        // is use easing function
+        useEasing: boolean
 
-    // the easing function
-    easingFn: Function
+        // the easing function
+        easingFn: Function
 
-    // when mounted will emit mountedCallback
-    mountedCallback (): void
+        // when mounted will emit mountedCallback
+        mountedCallback (): void
 
-    // start the countTo
-    start (): void
+        // start the countTo
+        start (): void
 
-    // pause the countTo
-    pause (): void
+        // pause the countTo
+        pause (): void
 
-    // reset the countTo
-    reset (): void
+        // reset the countTo
+        reset (): void
+    }
 }
-

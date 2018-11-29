@@ -1,5 +1,14 @@
-# vue-countTo    [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/PanJiaChen/vue-countTo) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PanJiaChen/vue-countTo) [![npm](https://img.shields.io/npm/v/vue-count-to.svg)](https://www.npmjs.com/package/vue-count-to) [![npm](https://img.shields.io/npm/dm/vue-count-to.svg)](https://npmcharts.com/compare/vue-count-to)
+# vue-countTo
 
+> It's a vue component that will count to a target number at a specified duration http://panjiachen.github.io/countTo/demo/
+
+ [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+ [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/PanJiaChen/vue-countTo)
+ [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PanJiaChen/vue-countTo)
+ [![npm](https://img.shields.io/npm/v/vue-count-to.svg)](https://www.npmjs.com/package/vue-count-to)
+ [![npm](https://img.shields.io/npm/dm/vue-count-to.svg)](https://npmcharts.com/compare/vue-count-to)
+ [![minified](https://badgen.net/bundlephobia/min/vue-count-to)](https://bundlephobia.com/result?p=vue-count-to)
+ [![gzip](https://badgen.net/bundlephobia/minzip/vue-count-to)](https://bundlephobia.com/result?p=vue-count-to)
 
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.

@@ -1,6 +1,6 @@
 # vue-countTo
 
-> It's a vue component that will count to a target number at a specified duration http://panjiachen.github.io/countTo/demo/
+> It's a vue component that will count to a target number at a specified duration
 
  [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
  [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/PanJiaChen/vue-countTo)
